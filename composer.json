@@ -1,5 +1,5 @@
 {
-    "name": "vendor/php-mysqli-crud-library",
+    "name": "joeleze/php-mysqli-crud-library",
     "description": "A mysqli library for all simple database query",
     "license": "MIT",
     "type": "library",

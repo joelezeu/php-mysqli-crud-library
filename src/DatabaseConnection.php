@@ -260,9 +260,9 @@ class DatabaseConnection {
     }
 }
 
-$db = new DatabaseConnection();
-$db->connect();
-$db->select("menu_item");
-$result = $db->getResult();
-var_dump(sizeof($result));
-$db->disconnect();
+//$db = new DatabaseConnection();
+//$db->connect();
+//$db->select("menu_item");
+//$result = $db->getResult();
+//var_dump(sizeof($result));
+//$db->disconnect();
