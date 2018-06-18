@@ -32,7 +32,7 @@ class DatabaseConnection {
     public function connect()
     {
         if (!$this->con) {
-            $this->myconn = new mysqli($this->config['databaseServer'], $this->config['databaseUserName'], $this->config['databasePassword'], $this->config['databaseName']);  // mysql_connect() with variables defined at the start of Database class
+            $this->myconn = new mysqli($this->config['databaseServer'].":".$this->config['databasePort'], $this->config['databaseUserName'], $this->config['databasePassword'], $this->config['databaseName']);  // mysql_connect() with variables defined at the start of Database class
             if ($this->myconn->connect_errno > 0) {
                 array_push($this->result, $this->myconn->connect_error);
                 return false; // Problem selecting database return FALSE
@@ -260,9 +260,9 @@ class DatabaseConnection {
     }
 }
 
-//$db = new DatabaseConnection();
-//$db->connect();
-//$db->select("menu_item");
-//$result = $db->getResult();
-//var_dump(sizeof($result));
-//$db->disconnect();
+$db = new DatabaseConnection();
+$db->connect();
+$db->select("menu_item");
+$result = $db->getResult();
+var_dump(sizeof($result));
+$db->disconnect();
